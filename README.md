@@ -17,25 +17,27 @@ ZavGOS - это приложение для голосования, которо
 Следуйте этим шагам, чтобы установить и запустить проект локально:
 
 1. **Клонируйте репозиторий:**
-   ```bash
+```bash
   git clone https://github.com/yourusername/zav-golos.git
   cd zav-golos
   npm install
-   ```bash
+  ```
 
 
 2. **Создайте файл config.ts в папке src и добавьте следующий код:**
 
 
-  ```import BACKEND_URL3 from '../.env/';
+  ```ts
+   import BACKEND_URL3 from '../.env/';
 
   export const BACKEND_URL = BACKEND_URL3;
 
 
-   npm start```
+  npm start
+```
 
 
-
+```
 zav-golos/
 ├── src/
 │   ├── api/                # API сервисы для взаимодействия с сервером
