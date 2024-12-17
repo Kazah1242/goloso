@@ -1,0 +1,111 @@
+/* src/components/NotificationModal.css */
+/* Добавляем стиль для NotificationModal */
+.notification-modal {
+    position: fixed; /* Изменено на fixed для центрирования */
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем на половину ширины и высоты */
+    z-index: 9999; /* Устанавливаем высокий z-index */
+    background-color: white; /* Непрозрачный белый фон */
+    color: black; /* Черный текст */
+    padding: 20px; /* Добавляем отступы для удобства */
+    border-radius: 8px; /* Закругляем углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    width: 80%; /* Ширина для мобильных устройств */
+    max-width: 500px; /* Максимальная ширина для больших экранов */
+    text-align: center; /* Центрируем текст и кнопку */
+    font-family: 'Nunito', sans-serif; /* Добавлено свойство шрифта */
+
+}
+
+@media (min-width: 768px) {
+    .notification-modal {
+        width: 50%; /* Ширина для планшетов и больших экранов */
+    }
+}
+
+@media (min-width: 1024px) {
+    .notification-modal {
+        width: 30%; /* Ширина для десктопов */
+    }
+}
+
+.notification-text {
+    margin-bottom: 20px; /* Добавляем отступ снизу для текста */
+    font-family: 'Nunito', sans-serif; /* Добавлено свойство шрифта */
+
+}
+
+.modal-button {
+    width: 100%; /* Устанавливаем ширину кнопки на 100% */
+    padding: 10px; /* Добавляем отступы для кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругляем углы кнопки */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    margin-top: 10px; /* Добавлен отступ сверху между кнопками */
+}
+
+.modal-button:hover {
+    background-color: #0056b3; /* Цвет фона кнопки при наведении */
+}
+
+.agree-button {
+    width: 100%; /* Устанавливаем ширину кнопки на 100% */
+    padding: 10px; /* Добавляем отступы для кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругляем углы кнопки */
+    background-color: #30ca63; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    margin-top: 10px; /* Добавлен отступ сверху между кнопками */
+}
+
+/* Пример стилей для email-input */
+.email-input {
+  width: 50%; /* Ширина на 100% */
+  padding: 12px; /* Увеличены отступы для удобства */
+  border: 1px solid #ccc; /* Цвет рамки */
+  border-radius: 5px; /* Закругляем углы */
+  font-family: 'Nunito', sans-serif; /* Добавлено свойство шрифта */
+  font-size: 16px; /* Размер шрифта */
+  margin-bottom: 20px; /* Увеличен отступ снизу */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавлена тень */
+  transition: border-color 0.3s; /* Плавный переход цвета рамки */
+}
+
+.email-input:focus {
+  border-color: #007bff; /* Цвет рамки при фокусе */
+  font-family: 'Nunito', sans-serif; /* Добавлено свойство шрифта */
+  outline: none; /* Убираем стандартный контур */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Добавлена тень при фокусе */
+}
+
+/* Новый класс для подсветки ошибки */
+.email-input.error {
+  border-color: red; /* Красный цвет рамки при ошибке */
+  animation: shake 0.3s; /* Анимация тряски */
+}
+
+/* Анимация тряски */
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px); }
+  50% { transform: translate(2px); }
+  75% { transform: translate(-2px); }
+  100% { transform: translate(0); }
+}
+
+.loading-overlay {
+  position: fixed; /* Фиксированное позиционирование */
+  top: 0;
+  left: 0;
+  width: 100%; /* Занимает всю ширину */
+  height: 100%; /* Занимает всю высоту */
+  background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+  display: flex; /* Используем flexbox для центрирования */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  z-index: 1000; /* Убедитесь, что это выше других элементов */
+}

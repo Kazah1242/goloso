@@ -1,0 +1,235 @@
+.page-candidate {
+  padding: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.page-candidate__back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  transition: background-color 0.3s;
+  margin-bottom: 2rem;
+}
+
+.page-candidate__back-button:hover {
+  background-color: #0056b3;
+}
+
+.page-candidate__details {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-candidate__details h1 {
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2.5em;
+}
+
+.page-candidate__info {
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.page-candidate__info p {
+  margin: 0.5rem 0;
+  font-size: 1.1em;
+}
+
+.page-candidate__description {
+  margin-bottom: 2rem;
+}
+
+.page-candidate__description h2,
+.page-candidate__achievements h2 {
+  font-family: 'Nunito', sans-serif;
+  color: #444;
+  margin-bottom: 1rem;
+  font-size: 1.8em;
+}
+
+.page-candidate__description p {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  color: #666;
+}
+
+.page-candidate__achievements ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page-candidate__achievements li {
+  font-family: 'Nunito', sans-serif;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  color: #666;
+}
+
+.page-candidate__achievements li:last-child {
+  border-bottom: none;
+}
+
+.page-candidate__content-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.page-candidate__text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.page-candidate__image {
+  flex: 0 0 40%;
+  max-width: 400px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  height: fit-content;
+}
+
+.page-candidate__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.page-candidate__navigation {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.page-candidate__nav-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  pointer-events: auto;
+  outline: none;
+  z-index: 1000;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page-candidate__nav-button:hover {
+  transform: scale(1.1);
+}
+
+.page-candidate__nav-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.page-candidate__nav-button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .page-candidate {
+    padding: 1rem;
+    min-height: 100dvh;
+  }
+
+  .page-candidate__details {
+    padding: 1rem;
+  }
+
+  .page-candidate__content-wrapper {
+    flex-direction: column;
+  }
+
+  .page-candidate__image {
+    flex: 1;
+    max-width: 100%;
+    position: static;
+    order: -1;
+  }
+
+  .page-candidate__details h1 {
+    margin-bottom: 1rem;
+    font-size: 2em;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.page-candidate__vote-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #ff4444;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-candidate__vote-button:hover {
+  background-color: #ff2222;
+}
+
+.page-candidate__voted-message {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.page-candidate__cancel-button {
+  display: block;
+  margin: 10px auto 0;
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-candidate__error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

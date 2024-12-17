@@ -1,0 +1,175 @@
+.auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.auth-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+@media (min-width: 768px) {
+    .auth-modal {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .auth-modal {
+        width: 30%;
+    }
+}
+
+.auth-modal h2 {
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    color: #333;
+}
+
+.auth-modal__instruction {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+}
+
+.email-input {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.email-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.verification-code-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.code-input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.code-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.modal-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.modal-button:hover {
+    background-color: #0056b3;
+}
+
+.modal-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.auth-modal__error {
+    color: #dc3545;
+    margin: 10px 0;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.auth-modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+
+.auth-modal__close:hover {
+    color: #333;
+}
+
+/* Анимация тряски для ошибок */
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-2px); }
+    50% { transform: translate(2px); }
+    75% { transform: translate(-2px); }
+    100% { transform: translate(0); }
+}
+
+.email-input.error {
+    border-color: #dc3545;
+    animation: shake 0.3s;
+}
+
+.code-input.error {
+    border-color: #dc3545;
+    animation: shake 0.3s;
+}
+
+/* Стили для состояния загрузки */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
